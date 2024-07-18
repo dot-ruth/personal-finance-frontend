@@ -1,0 +1,32 @@
+.navBar { 
+    display: flex; 
+    margin: 2%;
+    justify-content: space-between;
+    .buttons {display: flex;}
+    button { 
+        width: 100%;
+        margin-left: 5% ;
+    }
+}
+.container{
+    display: flex;
+    .hero {  
+         display: flex; 
+         flex-direction: column;
+         margin: 5%;
+         width: 50%;
+         .heroText { 
+            font-size: 80px;
+            .appname { color: cyan;}
+        }
+         p{ 
+            width: 80%;
+            font-size: 20px;
+        }
+     }
+     img { 
+        width: 50%;
+        margin-top: 5%;
+    }
+    
+}
