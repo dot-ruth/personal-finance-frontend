@@ -1,1 +1,62 @@
-<p>register-page works!</p>
+<div class="container">
+
+<div class="formContainer">
+    
+    <form [formGroup] ="registrationForm" class="registrationForm"> 
+      <h2>Registration</h2>
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input 
+          matInput 
+          placeholder="User@example.com"
+          formControlName = "email"
+          >
+        </mat-form-field>
+      </p>
+      <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input 
+        matInput 
+        [type]="hide() ? 'password' : 'text'"
+        formControlName="password"
+         />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Confirm your password</mat-label>
+            <input 
+            matInput 
+            [type]="hide() ? 'password' : 'text'" 
+            formControlName="confirmpassword"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="clickEvent($event)"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide()"
+            >
+              <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+    </p>
+    <p>
+        <button id="registerButton" mat-flat-button  type="submit" [disabled]="!registrationForm.valid" (click)="Register()">Register</button>
+    </p>
+  
+    <p> Already have an account ? , login in <a href="#">Here</a></p>
+  </form>
+</div>  
+</div>

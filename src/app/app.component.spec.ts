@@ -22,7 +22,7 @@ describe('AppComponent', () => {
   });
 
   it(`should display the landing page`,()=>{
-    let location: Location = TestBed.inject(Location);
+    const location: Location = TestBed.inject(Location);
     expect(location.path()).toBe('');
   })
 
