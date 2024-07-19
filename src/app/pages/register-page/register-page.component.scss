@@ -1,0 +1,19 @@
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+.registrationForm{
+    border: 5px solid cyan;
+    background-color: rgba(86, 203, 249,0.1);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    mat-form-field { 
+        width: 500px;
+        input { color: black;}
+     }
+    button { width: 250px; color: white; }
+}
+}
