@@ -1,14 +1,16 @@
 <div class="container">
 
-<div class="registrationForm">
-    <h2>Registration</h2>
+<div class="formContainer">
+    
+    <form [formGroup] ="registrationForm" class="registrationForm"> 
+      <h2>Registration</h2>
     <p>
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input 
           matInput 
           placeholder="User@example.com"
-          [formControl]="email"
+          formControlName = "email"
           >
         </mat-form-field>
       </p>
@@ -18,7 +20,7 @@
         <input 
         matInput 
         [type]="hide() ? 'password' : 'text'"
-        [formControl]="password"
+        formControlName="password"
          />
         <button
           mat-icon-button
@@ -37,7 +39,7 @@
             <input 
             matInput 
             [type]="hide() ? 'password' : 'text'" 
-            [formControl]="confirmPassword"
+            formControlName="confirmpassword"
             />
             <button
               mat-icon-button
@@ -51,9 +53,10 @@
           </mat-form-field>
     </p>
     <p>
-        <button id="registerButton" mat-flat-button (click)="Register()">Register</button>
+        <button id="registerButton" mat-flat-button  type="submit" [disabled]="!registrationForm.valid" (click)="Register()">Register</button>
     </p>
+  
     <p> Already have an account ? , login in <a href="#">Here</a></p>
-      
+  </form>
 </div>  
 </div>
