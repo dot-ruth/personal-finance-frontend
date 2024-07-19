@@ -5,13 +5,21 @@
     <p>
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="User@example.com">
+          <input 
+          matInput 
+          placeholder="User@example.com"
+          [formControl]="email"
+          >
         </mat-form-field>
       </p>
       <p>
       <mat-form-field appearance="outline">
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide() ? 'password' : 'text'" />
+        <input 
+        matInput 
+        [type]="hide() ? 'password' : 'text'"
+        [formControl]="password"
+         />
         <button
           mat-icon-button
           matSuffix
@@ -26,7 +34,11 @@
     <p>
         <mat-form-field appearance="outline">
             <mat-label>Confirm your password</mat-label>
-            <input matInput [type]="hide() ? 'password' : 'text'" />
+            <input 
+            matInput 
+            [type]="hide() ? 'password' : 'text'" 
+            [formControl]="confirmPassword"
+            />
             <button
               mat-icon-button
               matSuffix
