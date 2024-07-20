@@ -2,7 +2,7 @@
     height: 100vh;
     .sidenav { 
         width:15vw;
-        background: #92ddd9;
+        background: #729795;
     }
         mat-icon,span{
              color: #fff;
@@ -11,7 +11,6 @@
         }
         a.active 
            { background: white;
-            border-radius: 10% 0 0 10%;
             margin: 0 0 0 10%;}
             mat-icon,span
             { color: black;}

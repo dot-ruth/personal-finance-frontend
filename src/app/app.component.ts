@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet,Router,NavigationStart } from '@angular/router';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CommonModule } from '@angular/common';
-
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,SidenavComponent,CommonModule],
+  imports: [RouterOutlet,SidenavComponent,CommonModule,ToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
