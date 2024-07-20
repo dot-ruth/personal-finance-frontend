@@ -1,0 +1,64 @@
+<mat-sidenav-container  autosize class="sidenav_container">
+  
+  <mat-sidenav [opened]="true" mode="side" class="sidenav"  >
+
+    <app-profile-picture  [profile_url]="profile_url"></app-profile-picture>
+
+    <div>
+      <mat-nav-list >
+        
+        <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faHome"></fa-icon></mat-icon>
+            <span >Home</span>
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="['balance']" routerLinkActive="active">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faMoneyBill"></fa-icon></mat-icon>
+            <span >Balance</span>
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="['cashflow']" routerLinkActive="active">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faLineChart"></fa-icon></mat-icon>
+            <span >Cash Flow</span>
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="['spendings']" routerLinkActive="active">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faPieChart"></fa-icon></mat-icon>
+            <span >Spendings</span>
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="['budgets']" routerLinkActive="active">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faBarChart"></fa-icon></mat-icon>
+            <span >Budgets</span>
+          </span>
+        </a>
+
+        <a mat-list-item [routerLink]="['profile']" routerLinkActive="active">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faUser"></fa-icon></mat-icon>
+            <span >Profile</span>
+          </span>
+        </a>
+        
+        <a mat-list-item (click)="logout()">
+          <span class="entry">
+            <mat-icon><fa-icon [icon]="faSignOut"></fa-icon></mat-icon>
+            <span >Log Out</span>
+          </span>
+        </a>
+      </mat-nav-list>
+  </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div>
+    <router-outlet></router-outlet>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
