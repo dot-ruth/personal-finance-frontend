@@ -13,7 +13,6 @@ import {
    faBarChart,
    faUser,
    faSignOut,
-   faSign
    } 
 from '@fortawesome/free-solid-svg-icons';
 
@@ -41,7 +40,7 @@ export class SidenavComponent {
   }
 
   logout() {
-
+    console.log("user logged out")
   }
 
 }
