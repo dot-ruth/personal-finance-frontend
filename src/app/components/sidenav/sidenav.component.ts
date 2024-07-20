@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProfilePictureComponent } from '../profile-picture/profile-picture.component';
-import { RouterOutlet,RouterLink } from '@angular/router';
+import { RouterOutlet,RouterLink,RouterLinkActive } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatIcon } from '@angular/material/icon';
 import { MatListModule} from '@angular/material/list'
@@ -13,14 +13,13 @@ import {
    faBarChart,
    faUser,
    faSignOut,
-   faSign
    } 
 from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [ProfilePictureComponent,RouterOutlet,MatSidenavModule,FontAwesomeModule,MatIcon,RouterLink,MatListModule],
+  imports: [ProfilePictureComponent,RouterOutlet,MatSidenavModule,FontAwesomeModule,MatIcon,RouterLink,MatListModule,RouterLinkActive],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.scss'
 })
@@ -41,7 +40,7 @@ export class SidenavComponent {
   }
 
   logout() {
-
+    console.log("user logged out")
   }
 
 }
