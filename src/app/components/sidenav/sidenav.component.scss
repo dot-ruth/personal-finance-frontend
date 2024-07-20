@@ -1,0 +1,28 @@
+.sidenav_container{
+    height: 100vh;
+    .sidenav { 
+        width:15vw;
+        background: #673AB7;
+    }
+        mat-icon,span{
+             color: #fff;
+            width:50%;
+            height:100%;
+        }
+        a.active 
+           { background: white;
+            border-radius: 10% 0 0 10%;
+            margin: 0 0 0 10%;}
+            mat-icon,span
+            { color: black;}
+            }
+
+.entry
+  {  display: flex;
+    margin: auto;
+}
+
+.mat-list-item.active .mat-list-item-content 
+{  border-left: 4px solid #ccc}
+
+    
