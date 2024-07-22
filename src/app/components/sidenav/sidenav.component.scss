@@ -1,27 +1,35 @@
+* {
+    overflow: hidden !important;
+}
 .sidenav_container{
-    height: 100vh;
+    height: 93vh;
     .sidenav { 
         width:15vw;
         background: #729795;
+        border-radius: 0 !important;
     }
         mat-icon,span{
-             color: #fff;
+            color: #fff;
             width:50%;
             height:100%;
         }
         a.active 
-           { background: white;
-            margin: 0 0 0 10%;}
-            mat-icon,span
-            { color: black;}
+           { 
+            background: white;
+            margin: 0 0 0 10%;
+            mat-icon,span{ 
+                color: black;
+            }
+        }
+           
             }
 
 .entry
-  {  display: flex;
+{  
+    display: flex;
     margin: auto;
 }
+mat-sidenav-content { background-color: white;}
 
-.mat-list-item.active .mat-list-item-content 
-{  border-left: 4px solid #ccc}
 
     
