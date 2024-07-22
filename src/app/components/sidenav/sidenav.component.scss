@@ -8,11 +8,11 @@
         background: #729795;
         border-radius: 0 !important;
     }
-        mat-icon,span{
-            color: #fff;
-            width:50%;
-            height:100%;
-        }
+    mat-icon {
+        margin-right: 10% !important;
+        width: 20%;
+        height: 100%;
+    }
         a.active 
            { 
             background: white;
@@ -27,7 +27,10 @@
 .entry
 {  
     display: flex;
-    margin: auto;
+    margin-left: 20%;
+    color: #fff;
+    width:100%;
+    height:100%;
 }
 mat-sidenav-content { background-color: white;}
 
