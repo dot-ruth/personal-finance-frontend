@@ -1,0 +1,21 @@
+.cardContainer{
+    display: flex;
+    mat-card{
+        background-color: #729795;
+        width: 30vw;
+        height: 15vh;
+        margin: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        mat-card-title{
+            font-size: xx-large;
+            margin-bottom: 5%;
+        }
+        mat-card-subtitle { font-size: larger;}
+        mat-icon{ height: 100%;}
+        }
+}
+
+
+
