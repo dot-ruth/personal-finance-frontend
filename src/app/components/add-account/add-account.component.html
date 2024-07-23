@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="formContainer">
+        
+        <form [formGroup]="addAccountForm" class="addAccount"> 
+          <h2>Add Account</h2>
+        <p>
+            <mat-form-field  class="formFields" appearance="outline">
+              <mat-label>Account Name</mat-label>
+              <input 
+              matInput 
+              placeholder="Commercial Bank of Ethiopia"
+              formControlName = "accountName"
+              >
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field class="formFields" appearance="outline">
+                <mat-label>Pick color</mat-label>
+                <input matInput type="color" value="#000" formControlName="accountColor">
+              </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field class="formFields" appearance="outline">
+              <mat-label>Current Amount</mat-label>
+              <input 
+              matInput 
+              placeholder="0.00"
+              formControlName = "accountAmount"
+              >
+            </mat-form-field>
+          </p>
+
+       
+        <p>
+            <button mat-flat-button  type="submit" [disabled]="!addAccountForm.valid" (click)="addAccount()">ADD</button>
+        </p>
+      
+      </form>
+    </div>  
+    </div>
