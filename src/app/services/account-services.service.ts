@@ -6,7 +6,6 @@ import { Account } from '../models/account';
 })
 export class AccountServicesService {
 
-  constructor() { }
   private account!:Account[]
 
   createAccount ( account: Account): void{
